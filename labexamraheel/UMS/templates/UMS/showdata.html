@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "UMS/base.html" %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Data</title>
+</head>
+<body>
+{% block content %}
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">USER DETAILS</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Full Name</th>
+        <td>{{full_name}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">Roll Name</th>
+        <td>{{role_name}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Rights Name</th>
+        <th scope="col">Rights Details</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for right in rights %}
+        <tr>
+            <td>{{right.rights_name}}</td>
+            <td>{{right.rights_details}}</td>
+        </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+<a href="{% url 'show_user' %}" class="btn btn-primary">
+                <i class="fas fa-stream">Back</i>
+            </a>
+
+{% endblock content %}
+</body>
+</html>
