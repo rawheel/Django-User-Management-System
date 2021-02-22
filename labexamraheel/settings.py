@@ -119,7 +119,7 @@ USE_TZ = True
 
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+ALLOWED_HOSTS = ['django-user-management-system.herokuapp.com']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
